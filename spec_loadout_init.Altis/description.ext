@@ -1,0 +1,30 @@
+class CfgFunctions {
+	class Spec{
+		class init{
+			file = "scripts";
+			class loadout_respawn {};
+			class loadout_init {};
+			class ki_init {};
+		};
+	};
+};
+
+
+class Header
+{
+	gameType = "coop";
+	minPlayers = "1";
+	maxPlayers = "37";
+};
+
+respawn = BASE;
+respawnDelay = 5;
+respawnDialog = false;
+
+onLoadMission = "Spec Loadout";
+OnLoadMissionTime = TRUE;
+author="Spec";
+OnLoadName = "OP Spec Loadout";
+
+overviewText = "";
+overviewPicture = "";
