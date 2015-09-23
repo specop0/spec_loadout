@@ -1,5 +1,5 @@
 waitUntil {!isNull player}; 
-_x = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+params ["_x"];
 
 if(!isNull _x) then {
 	if(side _x == west) then {
@@ -43,12 +43,16 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 
 				for "_i" from 1 to 6 do {_x addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 				for "_i" from 1 to 6 do {_x addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "TeamLeader - #1";
 			case ("B_Soldier_TL_F"): {
@@ -89,14 +93,18 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_Keycuffs";};
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_CableTie";};
 
 				for "_i" from 1 to 6 do {_x addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 				for "_i" from 1 to 6 do {_x addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 				for "_i" from 1 to 5 do {_x addItemToBackpack "1Rnd_HE_Grenade_shell";};
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Grenadier - #2 inkl 40mm";
 			case ("B_Soldier_GL_F"):{
@@ -137,13 +145,17 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "1Rnd_Smoke_Grenade_shell";};
 				for "_i" from 1 to 2 do {_x addItemToBackpack "1Rnd_SmokeRed_Grenade_shell";};
 				for "_i" from 1 to 6 do {_x addItemToBackpack "1Rnd_HE_Grenade_shell";};
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "CombatLifeSaver - Medic #3";
 			case("B_medic_F"): {
@@ -183,18 +195,22 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 8 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 15 do {_x addItemToBackpack "cse_bandageElastic";};
-				for "_i" from 1 to 12 do {_x addItemToBackpack "cse_quikclot";};
-				for "_i" from 1 to 6 do {_x addItemToBackpack "cse_packing_bandage";};
-				for "_i" from 1 to 4 do {_x addItemToBackpack "cse_tourniquet";};
-				for "_i" from 1 to 12 do {_x addItemToBackpack "cse_saline_iv_500";};
-				for "_i" from 1 to 5 do {_x addItemToBackpack "cse_atropine";};
-				for "_i" from 1 to 10 do {_x addItemToBackpack "cse_epinephrine";};
-				for "_i" from 1 to 20 do {_x addItemToBackpack "cse_morphine";};
-				_x addItemToBackpack "cse_surgical_kit";
+				for "_i" from 1 to 8 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 15 do {_x addItemToBackpack "ACE_elasticBandage";};
+				for "_i" from 1 to 12 do {_x addItemToBackpack "ACE_quikclot";};
+				for "_i" from 1 to 6 do {_x addItemToBackpack "ACE_packingBandage";};
+				for "_i" from 1 to 4 do {_x addItemToBackpack "ACE_tourniquet";};
+				for "_i" from 1 to 12 do {_x addItemToBackpack "ACE_salineIV_500";};
+				for "_i" from 1 to 5 do {_x addItemToBackpack "ACE_atropine";};
+				for "_i" from 1 to 10 do {_x addItemToBackpack "ACE_epinephrine";};
+				for "_i" from 1 to 20 do {_x addItemToBackpack "ACE_morphine";};
+				_x addItemToBackpack "ACE_surgicalKit";
 				
-				[_x,true] call CSE_fnc_setMedicRole_CMS;
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
+				
+				_x setVariable ["ace_medical_medicClass", 1];
 			};
 			comment "Autorifleman - MG #3,#4";
 			case ("B_soldier_AR_F"): {
@@ -235,9 +251,13 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "AmmoBearer - MG-Assi";
 			case ("B_Soldier_A_F"): {
@@ -279,11 +299,15 @@ if(!isNull _x) then {
 				comment "uniform full";
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 				
 				for "_i" from 1 to 2 do {_x addItemToBackpack "150Rnd_762x54_Box";};
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Rifleman AT - AT-Schuetze #5,#6";
 			case ("B_soldier_LAT_F"): {
@@ -323,12 +347,16 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "RPG32_F";};
 				_x addWeapon "launch_RPG32_F";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Engineer - Pioner #5,#6 (explosive, repair)";
 			case ("B_engineer_F"): {
@@ -369,12 +397,16 @@ if(!isNull _x) then {
 				comment "uniform full";
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 
 				_x addItemToBackpack "ToolKit";
 				for "_i" from 1 to 3 do {_x addItemToBackpack "DemoCharge_Remote_Mag";};
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Repair Specialist - Logistic (inkl Repair)";
 			case ("B_soldier_repair_F"): {
@@ -415,11 +447,15 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
 				
 				_x addItemToBackpack "ToolKit";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Rifleman (Light) - MedEvac";
 			case ("B_Soldier_lite_F"): {
@@ -460,19 +496,23 @@ if(!isNull _x) then {
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 10 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 15 do {_x addItemToBackpack "cse_bandageElastic";};
-				for "_i" from 1 to 12 do {_x addItemToBackpack "cse_quikclot";};
-				for "_i" from 1 to 10 do {_x addItemToBackpack "cse_packing_bandage";};
-				for "_i" from 1 to 4 do {_x addItemToBackpack "cse_tourniquet";};
-				for "_i" from 1 to 15 do {_x addItemToBackpack "cse_saline_iv";};
-				for "_i" from 1 to 5 do {_x addItemToBackpack "cse_atropine";};
-				for "_i" from 1 to 15 do {_x addItemToBackpack "cse_epinephrine";};
-				for "_i" from 1 to 25 do {_x addItemToBackpack "cse_morphine";};
-				_x addItemToBackpack "cse_personal_aid_kit";
-				_x addItemToBackpack "cse_surgical_kit";
+				for "_i" from 1 to 10 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 15 do {_x addItemToBackpack "ACE_elasticBandage";};
+				for "_i" from 1 to 12 do {_x addItemToBackpack "ACE_quikclot";};
+				for "_i" from 1 to 10 do {_x addItemToBackpack "ACE_packingBandage";};
+				for "_i" from 1 to 4 do {_x addItemToBackpack "ACE_tourniquet";};
+				for "_i" from 1 to 15 do {_x addItemToBackpack "ACE_salineIV";};
+				for "_i" from 1 to 5 do {_x addItemToBackpack "ACE_atropine";};
+				for "_i" from 1 to 15 do {_x addItemToBackpack "ACE_epinephrine";};
+				for "_i" from 1 to 25 do {_x addItemToBackpack "ACE_morphine";};
+				_x addItemToBackpack "ACE_personalAidKit";
+				_x addItemToBackpack "ACE_surgicalKit";
 				
-				[_x,true] call CSE_fnc_setMedicRole_CMS;
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
+				
+				_x setVariable ["ace_medical_medicClass", 2];
 			};
 			comment "Rifleman";
 			case ("B_Soldier_F"): {
@@ -514,9 +554,13 @@ if(!isNull _x) then {
 				comment "uniform full";
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Helicopter Pilot - Template";
 			case("B_Helipilot_F"): {
@@ -558,9 +602,13 @@ if(!isNull _x) then {
 				comment "uniform full";
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			comment "Helicopter Crew - Template";
 			case("B_helicrew_F"): {
@@ -601,9 +649,13 @@ if(!isNull _x) then {
 				comment "uniform full";
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
 
-				for "_i" from 1 to 7 do {_x addItemToBackpack "cse_bandage_basic";};
-				for "_i" from 1 to 3 do {_x addItemToBackpack "cse_packing_bandage";};
-				_x addItemToBackpack "cse_tourniquet";
+				for "_i" from 1 to 7 do {_x addItemToBackpack "ACE_fieldDressing";};
+				for "_i" from 1 to 3 do {_x addItemToBackpack "ACE_packingBandage";};
+				_x addItemToBackpack "ACE_tourniquet";
+				
+				_x addItemToUniform "ACE_EarPlugs";
+				_x addItemToUniform "ACE_MapTools";
+				_x addItemToUniform "ACE_Flashlight_MX991";
 			};
 			default {
 				removeAllWeapons _x;
