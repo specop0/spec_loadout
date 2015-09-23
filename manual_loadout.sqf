@@ -1,6 +1,6 @@
 {
 	if(side _x == west) then {
-			switch (typeOf _x) do {
+		switch (typeOf _x) do {
 			comment "Officer - OPL";
 			case ("B_officer_F"): {
 				removeAllWeapons _x;
@@ -50,6 +50,7 @@
 				_x addItemToUniform "ACE_EarPlugs";
 				_x addItemToUniform "ACE_MapTools";
 				_x addItemToUniform "ACE_Flashlight_MX991";
+				_x addItemToUniform "ACE_microDAGR";
 			};
 			comment "TeamLeader - #1";
 			case ("B_Soldier_TL_F"): {
@@ -102,6 +103,7 @@
 				_x addItemToUniform "ACE_EarPlugs";
 				_x addItemToUniform "ACE_MapTools";
 				_x addItemToUniform "ACE_Flashlight_MX991";
+				_x addItemToUniform "ACE_microDAGR";
 			};
 			comment "Grenadier - #2 inkl 40mm";
 			case ("B_Soldier_GL_F"):{
@@ -153,6 +155,7 @@
 				_x addItemToUniform "ACE_EarPlugs";
 				_x addItemToUniform "ACE_MapTools";
 				_x addItemToUniform "ACE_Flashlight_MX991";
+				_x addItemToUniform "ACE_microDAGR";
 			};
 			comment "CombatLifeSaver - Medic #3";
 			case("B_medic_F"): {
@@ -453,6 +456,7 @@
 				_x addItemToUniform "ACE_EarPlugs";
 				_x addItemToUniform "ACE_MapTools";
 				_x addItemToUniform "ACE_Flashlight_MX991";
+				_x addItemToUniform "ACE_microDAGR";
 			};
 			comment "Rifleman (Light) - MedEvac";
 			case ("B_Soldier_lite_F"): {
@@ -508,6 +512,7 @@
 				_x addItemToUniform "ACE_EarPlugs";
 				_x addItemToUniform "ACE_MapTools";
 				_x addItemToUniform "ACE_Flashlight_MX991";
+				_x addItemToUniform "ACE_microDAGR";
 				
 				_x setVariable ["ace_medical_medicClass", 2];
 			};
