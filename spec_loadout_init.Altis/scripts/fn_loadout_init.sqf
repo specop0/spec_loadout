@@ -1,5 +1,5 @@
 waitUntil {!isNull player}; 
-_x = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+params ["_x"];
 
 if(!isNull _x) then {
 	if(side _x == west) then {

@@ -85,8 +85,10 @@ class Mission
 					id=2;
 					side="WEST";
 					vehicle="B_medic_F";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
+					description="Medic";
 				};
 			};
 		};
@@ -242,8 +244,10 @@ class Mission
 					id=11;
 					side="WEST";
 					vehicle="B_Soldier_lite_F";
+					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
+					description="Doctor";
 				};
 			};
 		};
