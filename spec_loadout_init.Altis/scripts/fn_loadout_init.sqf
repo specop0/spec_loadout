@@ -33,6 +33,7 @@ if(!isNull _x) then {
 				_x forceAddUniform "U_O_CombatUniform_ocamo";
 				_x addVest "V_TacVest_khk";
 				_x addBackpack "tf_mr3000";
+				_x addGoggles "G_Tactical_Clear";
 
 				_x addWeapon "Rangefinder";
 				_x linkItem "ItemMap";
