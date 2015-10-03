@@ -35,7 +35,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -86,7 +86,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -139,7 +139,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -190,7 +190,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -246,7 +246,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -293,7 +293,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				comment "uniform full";
@@ -342,7 +342,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -391,7 +391,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				comment "uniform full";
@@ -442,7 +442,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -492,7 +492,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				for "_i" from 1 to 2 do {_x addItemToBackpack "O_IR_Grenade";};
@@ -550,7 +550,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				comment "uniform full";
@@ -598,7 +598,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				comment "uniform full";
@@ -645,7 +645,7 @@
 				for "_i" from 1 to 2 do {_x addItemToUniform "SmokeShellGreen";};
 				_x addItemToUniform "SmokeShellPurple";
 
-				for "_i" from 1 to 2 do {_x addItemToUniform "rhs_mag_mk84";};
+				for "_i" from 1 to 2 do {_x addItemToUniform "ACE_M84";};
 				for "_i" from 1 to 2 do {_x addItemToUniform "Chemlight_red";};
 
 				comment "uniform full";
