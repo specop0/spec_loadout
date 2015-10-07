@@ -1,7 +1,7 @@
 waitUntil {!isNull player}; 
-params ["_x"];
+_parameterCorrect = params [["_x",objNull]];
 
-if(!isNull _x) then {
+if(_parameterCorrect) then {
 	if(side _x == west) then {
 		[_x] call Spec_fnc_loadout_respawn;
 		comment "only some classes other loadout";
@@ -33,7 +33,6 @@ if(!isNull _x) then {
 				_x forceAddUniform "U_O_CombatUniform_ocamo";
 				_x addVest "V_TacVest_khk";
 				_x addBackpack "tf_mr3000";
-				_x addGoggles "G_Tactical_Clear";
 
 				_x addWeapon "Rangefinder";
 				_x linkItem "ItemMap";
@@ -43,7 +42,5 @@ if(!isNull _x) then {
 				_x linkItem "ItemGPS";
 			};
 		};
-	} else {
-		_x removeMagazines "1Rnd_HE_Grenade_shell";
 	};
 };
