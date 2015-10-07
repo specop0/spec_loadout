@@ -1,11 +1,5 @@
 class CfgFunctions {
-	class Spec{
-		class init{
-			file = "scripts";
-			class loadout {};
-			class ki_init {};
-		};
-	};
+#include "spec_loadout\CfgFunctions.hpp"
 };
 
 
