@@ -664,7 +664,7 @@ if(_parameterCorrect) then {
 			};
 			comment "Default Case - kein passender Soldat";
 			comment "Nehme zum Testen ihm alles weg.";
-			comment "Im MP Standard Layout mit addItemToBackpack 'FirstAidKit'";
+			comment "Im MP Standard Layout mit addItemToBackpack 'ACE_Banana'";
 			comment "damit Spieler erkennt, dass etwas nicht in Ordnung ist.";
 			default {
 				removeAllWeapons _x;
