@@ -1,0 +1,23 @@
+class CfgFunctions {
+#include "spec_loadout\CfgFunctions.hpp"
+};
+
+
+class Header
+{
+	gameType = "coop";
+	minPlayers = "1";
+	maxPlayers = "37";
+};
+
+respawn = BASE;
+respawnDelay = 5;
+respawnDialog = false;
+
+onLoadMission = "Spec Loadout";
+OnLoadMissionTime = TRUE;
+author="Spec";
+OnLoadName = "OP Spec Loadout";
+
+overviewText = "";
+overviewPicture = "";
