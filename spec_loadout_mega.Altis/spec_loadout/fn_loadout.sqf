@@ -97,20 +97,21 @@ if(_parameterCorrect) then {
 		for "_i" from 1 to 2 do {[_x,"ACE_M84",1] call Spec_fnc_addItemToContainer;};
 
 		// medic equipment
-		if(_type == _medic) then {
-			for "_i" from 1 to 10 do {[_x,"ACE_fieldDressing",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 15 do {[_x,"ACE_elasticBandage",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 10 do {[_x,"ACE_quikclot",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 10 do {[_x,"ACE_packingBandage",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 3 do {[_x,"ACE_tourniquet",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 4 do {[_x,"ACE_salineIV_500",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 5 do {[_x,"ACE_atropine",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 8 do {[_x,"ACE_epinephrine",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 8 do {[_x,"ACE_morphine",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 3 do {[_x,"ACE_surgicalKit",2] call Spec_fnc_addItemToContainer;};
-			_x setVariable ["ace_medical_medicClass", 1];
-		} else {
-			if(_type == _medevac) then {
+		switch _type do {
+			case _medic : {
+				for "_i" from 1 to 10 do {[_x,"ACE_fieldDressing",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 15 do {[_x,"ACE_elasticBandage",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 10 do {[_x,"ACE_quikclot",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 10 do {[_x,"ACE_packingBandage",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 3 do {[_x,"ACE_tourniquet",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 4 do {[_x,"ACE_salineIV_500",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 5 do {[_x,"ACE_atropine",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 8 do {[_x,"ACE_epinephrine",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 8 do {[_x,"ACE_morphine",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 3 do {[_x,"ACE_surgicalKit",2] call Spec_fnc_addItemToContainer;};
+				_x setVariable ["ace_medical_medicClass", 1];
+			};
+			case _medevac : {
 				for "_i" from 1 to 10 do {[_x,"ACE_fieldDressing",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 15 do {[_x,"ACE_elasticBandage",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 10 do {[_x,"ACE_quikclot",2] call Spec_fnc_addItemToContainer;};
@@ -123,7 +124,8 @@ if(_parameterCorrect) then {
 				for "_i" from 1 to 5 do {[_x,"ACE_surgicalKit",2] call Spec_fnc_addItemToContainer;};
 				[_x,"ACE_personalAidKit",2] call Spec_fnc_addItemToContainer;
 				_x setVariable ["ace_medical_medicClass", 2];
-			} else {
+			};
+			default {
 				for "_i" from 1 to 7 do {[_x,"ACE_fieldDressing",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 2 do {[_x,"ACE_tourniquet",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 1 do {[_x,"ACE_morphine",2] call Spec_fnc_addItemToContainer;};
@@ -131,44 +133,43 @@ if(_parameterCorrect) then {
 		};
 		
 		// grenade launcher
-		if(_type == _tf) then {
-			for "_i" from 1 to 6 do {[_x,"1Rnd_Smoke_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 6 do {[_x,"1Rnd_SmokeRed_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 1 do {[_x,"1Rnd_HE_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 6 do {[_x,"UGL_FlareRed_F",2] call Spec_fnc_addItemToContainer;};
-		} else {
-			if(_type == _gl) then {
+		switch _type do {
+			case _tf : {
+				for "_i" from 1 to 6 do {[_x,"1Rnd_Smoke_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 6 do {[_x,"1Rnd_SmokeRed_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 1 do {[_x,"1Rnd_HE_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 6 do {[_x,"UGL_FlareRed_F",2] call Spec_fnc_addItemToContainer;};
+			};
+			case _gl : {
 				for "_i" from 1 to 2 do {[_x,"1Rnd_Smoke_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 2 do {[_x,"1Rnd_SmokeRed_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 5 do {[_x,"1Rnd_HE_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
 				for "_i" from 1 to 2 do {[_x,"UGL_FlareRed_F",2] call Spec_fnc_addItemToContainer;};
-			} else {
-				if(_type == _opl) then {
-					for "_i" from 1 to 6 do {[_x,"1Rnd_SmokeRed_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
-				};
+			};
+			case _opl : {
+				for "_i" from 1 to 6 do {[_x,"1Rnd_SmokeRed_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
 			};
 		};
 		
 		// special equipment
-		if(_type == _pio) then {
-			_x addItemToBackpack "ToolKit";
-			for "_i" from 1 to 2 do {[_x,"DemoCharge_Remote_Mag",2] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 2 do {[_x,"SLAMDirectionalMine_Wire_Mag",3] call Spec_fnc_addItemToContainer;};
-			[_x,"ACE_M26_Clacker",2] call Spec_fnc_addItemToContainer;
-			[_x,"ACE_DefusalKit",2] call Spec_fnc_addItemToContainer;
-			_x setVariable ["ACE_IsEngineer", 2];
-		} else {
-			if(_type == _logistic) then {
+		switch _type do {
+			case _pio : {
+				_x addItemToBackpack "ToolKit";
+				for "_i" from 1 to 2 do {[_x,"DemoCharge_Remote_Mag",2] call Spec_fnc_addItemToContainer;};
+				for "_i" from 1 to 2 do {[_x,"SLAMDirectionalMine_Wire_Mag",3] call Spec_fnc_addItemToContainer;};
+				[_x,"ACE_M26_Clacker",2] call Spec_fnc_addItemToContainer;
+				[_x,"ACE_DefusalKit",2] call Spec_fnc_addItemToContainer;
+				_x setVariable ["ACE_IsEngineer", 2];
+			};
+			case _logistic : {
 				[_x,"ToolKit",2] call Spec_fnc_addItemToContainer;
 				_x setVariable ["ACE_IsEngineer", 2];
-			} else {
-				if(_type == _mg) then {
-					[_x,"ACE_SpareBarrel",2] call Spec_fnc_addItemToContainer;
-				} else {
-					if(_type == _mgAssi) then {
-						for "_i" from 1 to 2 do {[_x,"BWA3_120Rnd_762x51",2] call Spec_fnc_addItemToContainer;};
-					};
-				};
+			};
+			case _mg : {
+				[_x,"ACE_SpareBarrel",2] call Spec_fnc_addItemToContainer;
+			};
+			case _mgAssi : {
+				for "_i" from 1 to 2 do {[_x,"BWA3_120Rnd_762x51",2] call Spec_fnc_addItemToContainer;};
 			};
 		};
 		
