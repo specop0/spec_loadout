@@ -1,4 +1,4 @@
-_parameterCorrect = params [["_x",objNull],["_item",objNull],["_container",0,[0]]];
+_parameterCorrect = params [["_x",objNull],["_item",objNull],["_container",3,[0]]];
 _returnValue = 1;
 
 if(_parameterCorrect) then {
@@ -27,7 +27,7 @@ if(_parameterCorrect) then {
 				hint format ["Could not add %1 to Backpack\nUnit Type = %2\nUnit Name = %3", _item, typeOf _x, str _x];
 			};
 		};
-		case 3 : {
+		default {
 			if(_x canAddItemToUniform _item) then {
 				_x addItemToUniform _item;
 				_returnValue = 0;
