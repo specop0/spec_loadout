@@ -4,6 +4,7 @@ class spec_loadout {
 		file="spec_loadout";
 		class loadout {};
 		class ki_init {};
+		class addItemToContainer {};
 		class loadout_at {};
 		class loadout_gl {};
 		class loadout_logistic {};

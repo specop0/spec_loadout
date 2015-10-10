@@ -5,8 +5,7 @@ _returnValue = 1;
 if(_parameterCorrect) then {
 	switch (_container) do {
 		case 0 : {
-			_spaceFree = _x canAddItemToUniform _item;
-			if(_spaceFree) then {
+			if(_x canAddItemToUniform _item) then {
 				_x addItemToUniform _item;
 				_returnValue = 0;
 			} else {
@@ -14,8 +13,7 @@ if(_parameterCorrect) then {
 			};	
 		};
 		case 1 : {
-			_spaceFree = _x canAddItemToVest _item;
-			if(_spaceFree) then {
+			if(_x canAddItemToVest _item) then {
 				_x addItemToVest _item;
 				_returnValue = 0;
 			} else {
@@ -23,8 +21,7 @@ if(_parameterCorrect) then {
 			};
 		};
 		case 2 : {
-			_spaceFree = _x canAddItemToBackpack _item;
-			if(_spaceFree) then {
+			if(_x canAddItemToBackpack _item) then {
 				_x addItemToBackpack _item;
 				_returnValue = 0;
 			} else {
@@ -32,18 +29,15 @@ if(_parameterCorrect) then {
 			};
 		};
 		case 3 : {
-			_spaceFree = _x canAddItemToUniform _item;
-			if(_spaceFree) then {
+			if(_x canAddItemToUniform _item) then {
 				_x addItemToUniform _item;
 				_returnValue = 0;
 			} else {
-				_spaceFree = _x canAddItemToVest _item;
-				if(_spaceFree) then {
+				if(_x canAddItemToVest _item) then {
 					_x addItemToVest _item;
 					_returnValue = 0;
 				} else {
-					_spaceFree = _x canAddItemToBackpack _item;
-					if(_spaceFree) then {
+					if(_x canAddItemToBackpack _item) then {
 						_x addItemToBackpack _item;
 						_returnValue = 0;
 					} else {
