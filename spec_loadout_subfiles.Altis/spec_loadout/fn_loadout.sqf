@@ -1,5 +1,5 @@
 waitUntil {!isNull player};
-_parameterCorrect = params [["_x",objNull]];
+_parameterCorrect = params [["_x",objNull,[objNull]]];
 
 if(_parameterCorrect) then {
 	if(side _x == west) then {
