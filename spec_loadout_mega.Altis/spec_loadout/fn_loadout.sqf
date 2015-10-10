@@ -1,23 +1,36 @@
 waitUntil {!isNull player || isServer};
 _parameterCorrect = params [["_x",objNull,[objNull]]];
 
+comment "Officer";
 _opl = "B_officer_F"; 
+comment "Squad Leader";
 _funker = "B_Soldier_SL_F";
+comment "Combat Life Saver";
 _medic = "B_medic_F";
 
+
+comment "Team Leader";
 _tf = "B_Soldier_TL_F";
+comment "Grenadier";
 _gl = "B_Soldier_GL_F";
+comment "Autorifleman";
 _mg = "B_soldier_AR_F";
+comment "Ammo Bearer";
 _mgAssi = "B_Soldier_A_F";
+comment "Rifleman (AT)";
 _at = "B_soldier_LAT_F";
+comment "Engineer";
 _pio = "B_engineer_F";
 
+comment "Repair Specialist";
 _logistic = "B_soldier_repair_F";
+comment "Rifleman (Light)";
 _medevac = "B_Soldier_lite_F";
 
+comment "Helicopter Pilot";
 _pilot = "B_Helipilot_F";
 
-comment "classes to use: B_Soldier_F (Rifleman), B_Helipilot_F (Helicoptor Pilot), B_helicrew_F (Helicoptor Crew)";
+comment "classes to use: B_Soldier_F (Rifleman), B_Helipilot_F (Helicopter Pilot), B_helicrew_F (Helicopter Crew)";
 
 if(_parameterCorrect) then {
 	if(side _x == west) then {
@@ -32,6 +45,7 @@ if(_parameterCorrect) then {
 		removeHeadgear _x;
 		removeGoggles _x;
 		
+		comment "Edit Vest, Uniform, Backpack, Headgear (, Googgles)";
 		_x addVest "V_PlateCarrier1_rgr";
 		_x forceAddUniform "U_B_CombatUniform_mcam";
 		if(_type == _opl || _type == _funker || _type == _logistic || _type == _pilot) then {
@@ -49,6 +63,8 @@ if(_parameterCorrect) then {
 			_x addHeadgear "H_HelmetB_grass";
 		};
 		_x addGoggles "BWA3_G_Combat_Clear";
+		
+		comment "Loadout based on TTT-Mod (edit weapons near end of file)";
 		if(_type == _opl || _type == _tf) then {
 			_x addWeapon "ACE_Vector";
 		} else {
@@ -167,7 +183,7 @@ if(_parameterCorrect) then {
 		comment "==============  Weapons  ==================";
 		comment "===========================================";
 		
-		comment "MG (change 'case _mgAssi :' ammunition above)";
+		comment "MG (change 'case _mgAssi :' ammunition for mmg above)";
 		if(_type == _mg) then {
 			for "_i" from 1 to 2 do {[_x,"BWA3_120Rnd_762x51",1] call Spec_fnc_addItemToContainer;};
 			for "_i" from 1 to 3 do {[_x,"11Rnd_45ACP_Mag",1] call Spec_fnc_addItemToContainer;};
@@ -201,6 +217,10 @@ if(_parameterCorrect) then {
 					_x addPrimaryWeaponItem "optic_MRCO";
 					_x addWeapon "rhsusf_weap_m1911a1";
 				} else {
+					comment "AT launcher";
+					if(_type == _at) then {
+						_x addWeapon "rhs_weap_m136";
+					};
 					comment "standard weapon";
 					for "_i" from 1 to 6 do {[_x,"rhs_mag_30Rnd_556x45_Mk318_Stanag",1] call Spec_fnc_addItemToContainer;};
 					for "_i" from 1 to 3 do { call Spec_fnc_addItemToContainer;};
