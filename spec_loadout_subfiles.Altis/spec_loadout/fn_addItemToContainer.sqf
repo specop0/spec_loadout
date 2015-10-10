@@ -1,4 +1,3 @@
-waitUntil {!isNull player};
 _parameterCorrect = params [["_x",objNull],["_item",objNull],["_container",0,[0]]];
 _returnValue = 1;
 
