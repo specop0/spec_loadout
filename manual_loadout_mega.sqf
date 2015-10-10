@@ -1,25 +1,33 @@
-waitUntil {!isNull player || isServer};
-_parameterCorrect = params [["_x",objNull,[objNull]]];
-
+//OPL: B_officer_F
 _opl = "B_officer_F"; 
-_funker = "B_Soldier_SL_F";
-_medic = "B_medic_F";
-
+//TF: B_Soldier_TL_F
 _tf = "B_Soldier_TL_F";
+//Funker: B_Soldier_SL_F
+_funker = "B_Soldier_SL_F";
+//GL: B_Soldier_GL_F
 _gl = "B_Soldier_GL_F";
+//medic: B_medic_F
+_medic = "B_medic_F";
+//mg: B_soldier_AR_F
 _mg = "B_soldier_AR_F";
+//mg-assi: B_Soldier_A_F
 _mgAssi = "B_Soldier_A_F";
+//at: B_soldier_LAT_F
 _at = "B_soldier_LAT_F";
+//pio: B_engineer_F
 _pio = "B_engineer_F";
-
+//logistic: B_soldier_repair_F
 _logistic = "B_soldier_repair_F";
+//medevac: B_Soldier_lite_F
 _medevac = "B_Soldier_lite_F";
 
+//B_Soldier_F
+//B_Helipilot_F
 _pilot = "B_Helipilot_F";
+//B_helicrew_F
+//_coPilot = "B_helicrew_F";
 
-comment "classes to use: B_Soldier_F (Rifleman), B_Helipilot_F (Helicoptor Pilot), B_helicrew_F (Helicoptor Crew)";
-
-if(_parameterCorrect) then {
+{
 	if(side _x == west) then {
 		_type = typeOf _x;
 		
@@ -64,7 +72,7 @@ if(_parameterCorrect) then {
 		_x linkItem "ItemWatch";
 		_x linkItem "tf_anprc152";
 		
-		comment "lead equipment (tablet, etc)";
+		// lead equipment (tablet, etc)
 		if(_type == _opl || _type == _tf || _type == _funker || _type == _logistic || _type == _medevac || _type == _pilot) then {
 			_x addItemToUniform "ACE_microDAGR";
 			if(_type == _opl) then {
@@ -80,7 +88,7 @@ if(_parameterCorrect) then {
 			for "_i" from 1 to 3 do {[_x,"ACE_CableTie",1] call Spec_fnc_addItemToContainer;};
 		};
 		
-		comment "standard equipment (ear plugs, grenades)";
+		// standard equipment (ear plugs, grenades)
 		[_x,"ACE_EarPlugs",0] call Spec_fnc_addItemToContainer;
 		[_x,"ACE_MapTools",0] call Spec_fnc_addItemToContainer;
 		
@@ -91,13 +99,13 @@ if(_parameterCorrect) then {
 		for "_i" from 1 to 2 do {[_x,"SmokeShellGreen",0] call Spec_fnc_addItemToContainer;};
 		[_x,"SmokeShellPurple",0] call Spec_fnc_addItemToContainer;
 		
-		comment "night equipment";
+		// night equipment
 		[_x,"ACE_Flashlight_MX991",0] call Spec_fnc_addItemToContainer;
 		[_x,"ACE_NVG_Wide",1] call Spec_fnc_addItemToContainer;
 		
 		for "_i" from 1 to 2 do {[_x,"ACE_M84",1] call Spec_fnc_addItemToContainer;};
 
-		comment "medic equipment";
+		// medic equipment
 		switch _type do {
 			case _medic : {
 				for "_i" from 1 to 10 do {[_x,"ACE_fieldDressing",2] call Spec_fnc_addItemToContainer;};
@@ -133,7 +141,7 @@ if(_parameterCorrect) then {
 			};
 		};
 		
-		comment "role specific special equipment";
+		// role specific special equipment
 		switch _type do {
 			case _tf : {
 				for "_i" from 1 to 6 do {[_x,"1Rnd_Smoke_Grenade_shell",2] call Spec_fnc_addItemToContainer;};
@@ -163,11 +171,11 @@ if(_parameterCorrect) then {
 			};
 		};
 		
-		comment "===========================================";
-		comment "==============  Weapons  ==================";
-		comment "===========================================";
+		// ===========================================
+		// ==============  Weapons  ==================
+		// ===========================================
 		
-		comment "MG (change 'case _mgAssi :' ammunition above)";
+		// MG (change 'case _mgAssi :' ammunition above)
 		if(_type == _mg) then {
 			for "_i" from 1 to 2 do {[_x,"BWA3_120Rnd_762x51",1] call Spec_fnc_addItemToContainer;};
 			for "_i" from 1 to 3 do {[_x,"11Rnd_45ACP_Mag",1] call Spec_fnc_addItemToContainer;};
@@ -180,7 +188,7 @@ if(_parameterCorrect) then {
 			_x addWeapon "hgun_Pistol_heavy_01_snds_F";
 			_x addHandgunItem "muzzle_snds_acp";
 		} else {
-			comment "grenade launcher";
+			// grenade launcher
 			if(_type == _tf || _type == _gl) then {
 				for "_i" from 1 to 6 do {[_x,"BWA3_30Rnd_556x45_G36_AP",2] call Spec_fnc_addItemToContainer;};
 				_x addWeapon "BWA3_G36_equipped";
@@ -192,6 +200,7 @@ if(_parameterCorrect) then {
 				_x addHandgunItem "muzzle_snds_acp";
 				_x addItemToUniform "BWA3_optic_NSV600";
 			} else {
+				// pilot
 				if(_type == _pilot) then {
 					for "_i" from 1 to 2 do {[_x,"rhsusf_100Rnd_762x51_m80a1epr",1] call Spec_fnc_addItemToContainer;};
 					_x addWeapon "hlc_lmg_M60E4";
@@ -201,7 +210,7 @@ if(_parameterCorrect) then {
 					_x addPrimaryWeaponItem "optic_MRCO";
 					_x addWeapon "rhsusf_weap_m1911a1";
 				} else {
-					comment "standard weapon";
+					// Standard Weapon
 					for "_i" from 1 to 6 do {[_x,"rhs_mag_30Rnd_556x45_Mk318_Stanag",1] call Spec_fnc_addItemToContainer;};
 					for "_i" from 1 to 3 do { call Spec_fnc_addItemToContainer;};
 
@@ -214,4 +223,4 @@ if(_parameterCorrect) then {
 			};
 		};
 	};
-};
+} foreach  allunits;  
