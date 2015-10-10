@@ -1,4 +1,4 @@
-waitUntil {!isNull player};
+waitUntil {!isNull player || isServer};
 _parameterCorrect = params [["_x",objNull,[objNull]]];
 
 if(_parameterCorrect) then {
