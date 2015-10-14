@@ -30,7 +30,7 @@ _medevac = "B_Soldier_lite_F";
 comment "Helicopter Pilot";
 _pilot = "B_Helipilot_F";
 
-comment "classes to use: B_Soldier_F (Rifleman), B_Helipilot_F (Helicopter Pilot), B_helicrew_F (Helicopter Crew)";
+comment "classes to use: B_Soldier_F (Rifleman), B_Pilot_F (Pilot), B_helicrew_F (Helicopter Crew)";
 
 if(_parameterCorrect) then {
 	if(side _x == west) then {
@@ -46,8 +46,8 @@ if(_parameterCorrect) then {
 		removeGoggles _x;
 		
 		comment "Edit Vest, Uniform, Backpack, Headgear (, Googgles)";
-		_x addVest "V_PlateCarrier1_rgr";
 		_x forceAddUniform "U_B_CombatUniform_mcam";
+		_x addVest "V_PlateCarrier1_rgr";
 		if(_type == _opl || _type == _funker || _type == _logistic || _type == _pilot) then {
 			_x addBackpack "tf_rt1523g_big_rhs";
 		} else {
