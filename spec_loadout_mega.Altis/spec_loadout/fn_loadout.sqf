@@ -186,36 +186,28 @@ if(_parameterCorrect) then {
 		comment "MG (change 'case _mgAssi :' ammunition for mmg above)";
 		if(_type == _mg) then {
 			for "_i" from 1 to 2 do {[_x,"BWA3_120Rnd_762x51",1] call Spec_fnc_addItemToContainer;};
-			for "_i" from 1 to 3 do {[_x,"11Rnd_45ACP_Mag",1] call Spec_fnc_addItemToContainer;};
 			[_x,"BWA3_120Rnd_762x51",2] call Spec_fnc_addItemToContainer;
 
 			_x addWeapon "BWA3_MG5";
 			_x addPrimaryWeaponItem "BWA3_acc_LLM01_irlaser";
 			_x addPrimaryWeaponItem "BWA3_optic_ZO4x30";
 			_x addItemToUniform "BWA3_optic_NSV600";
-			_x addWeapon "hgun_Pistol_heavy_01_snds_F";
-			_x addHandgunItem "muzzle_snds_acp";
 		} else {
 			comment "grenade launcher";
 			if(_type == _tf || _type == _gl) then {
 				for "_i" from 1 to 6 do {[_x,"BWA3_30Rnd_556x45_G36_AP",2] call Spec_fnc_addItemToContainer;};
+				
 				_x addWeapon "BWA3_G36_equipped";
-				for "_i" from 1 to 3 do {[_x,"11Rnd_45ACP_Mag",1] call Spec_fnc_addItemToContainer;};
-
 				_x addPrimaryWeaponItem "BWA3_acc_LLM01_irlaser";
 				_x addPrimaryWeaponItem "BWA3_optic_ZO4x30";
-				_x addWeapon "hgun_Pistol_heavy_01_snds_F";
-				_x addHandgunItem "muzzle_snds_acp";
 				_x addItemToUniform "BWA3_optic_NSV600";
 			} else {
 				if(_type == _pilot) then {
 					for "_i" from 1 to 2 do {[_x,"rhsusf_100Rnd_762x51_m80a1epr",1] call Spec_fnc_addItemToContainer;};
 					_x addWeapon "hlc_lmg_M60E4";
-					for "_i" from 1 to 3 do {[_x,"rhsusf_mag_7x45acp_MHP",1] call Spec_fnc_addItemToContainer;};
-					[_x,"rhsusf_100Rnd_762x51_m80a1epr",2] call Spec_fnc_addItemToContainer;
-
 					_x addPrimaryWeaponItem "optic_MRCO";
-					_x addWeapon "rhsusf_weap_m1911a1";
+
+					[_x,"rhsusf_100Rnd_762x51_m80a1epr",2] call Spec_fnc_addItemToContainer;					
 				} else {
 					comment "AT launcher";
 					if(_type == _at) then {
@@ -223,15 +215,17 @@ if(_parameterCorrect) then {
 					};
 					comment "standard weapon";
 					for "_i" from 1 to 6 do {[_x,"rhs_mag_30Rnd_556x45_Mk318_Stanag",1] call Spec_fnc_addItemToContainer;};
-					for "_i" from 1 to 3 do { call Spec_fnc_addItemToContainer;};
 
 					_x addWeapon "rhs_m4a1_grip_acog3_usmc";
 					_x addPrimaryWeaponItem "rhsusf_acc_anpeq15";
 					_x addPrimaryWeaponItem "rhsusf_acc_ACOG3_USMC";
-					_x addWeapon "rhsusf_weap_m1911a1";
 					_x addItemToUniform "rhsusf_acc_eotech_552";
 				};
 			};
 		};
+		comment "secondary weapon";
+		for "_i" from 1 to 3 do {[_x,"11Rnd_45ACP_Mag",1] call Spec_fnc_addItemToContainer;};
+		_x addWeapon "hgun_Pistol_heavy_01_snds_F";
+		_x addHandgunItem "muzzle_snds_acp";
 	};
 };
