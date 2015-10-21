@@ -1,5 +1,20 @@
-_parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["string"]],["_containerNumber",0,[0]]];
-_returnValue = false;
+local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]],["_containerNumber",-1,[0]]];
+local _returnValue = false;
+
+
+if (_containerNumber == -1) then {
+	local _cfg = (configFile >> "CfgWeapons");
+	if (_containerClassname isKindOf ["Uniform_Base", _cfg]) then {
+		_containerNumber = 0;
+		
+	};
+	if (_containerClassname isKindOf ["Vest_NoCamo_Base", _cfg] && _containerClassname isKindOf ["Vest_Camo_Base", _cfg]) then {
+		_containerNumber = 1;
+	};
+	if (_containerClassname isKindOf "Bag_Base") then {
+		_containerNumber = 2;
+	};
+};
 
 if(_parameterCorrect) then {
 	_returnValue = true;
@@ -14,7 +29,7 @@ if(_parameterCorrect) then {
 			} else {
 				removeUniform _x;
 				_x forceAddUniform _containerClassname;
-			};	
+			};
 		};
 		case 1 : {
 			_vestName = vest _x;
@@ -26,7 +41,7 @@ if(_parameterCorrect) then {
 			} else {
 				removeVest _x;
 				_x addVest _containerClassname;
-			};	
+			};
 		};
 		case 2 : {
 			_backpackName = backpack _x;
@@ -38,7 +53,7 @@ if(_parameterCorrect) then {
 			} else {
 				removeBackpack _x;
 				_x addBackpack _containerClassname;
-			};	
+			};
 		};
 		default {
 			_returnValue = false;
