@@ -1,1 +1,1 @@
-[player] call Spec_fnc_loadout;
+//[player] call Spec_fnc_loadout;
