@@ -1,9 +1,9 @@
-local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]],["_containerNumber",-1,[0]]];
+local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
 local _returnValue = false;
 
-
-if (_containerNumber == -1) then {
+if(_parameterCorrect) then {
 	local _cfg = (configFile >> "CfgWeapons");
+	local _containerNumber = -1;
 	if (_containerClassname isKindOf ["Uniform_Base", _cfg]) then {
 		_containerNumber = 0;
 		
@@ -14,9 +14,6 @@ if (_containerNumber == -1) then {
 	if (_containerClassname isKindOf "Bag_Base") then {
 		_containerNumber = 2;
 	};
-};
-
-if(_parameterCorrect) then {
 	_returnValue = true;
 	switch (_containerNumber) do {
 		case 0 : {
