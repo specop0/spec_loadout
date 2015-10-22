@@ -1,40 +1,40 @@
 waitUntil {!isNull player || isServer};
-_parameterCorrect = params [["_x",objNull,[objNull]]];
+local _parameterCorrect = params [["_x",objNull,[objNull]]];
 
 comment "Officer";
-_opl = "B_officer_F"; 
+local _opl = "B_officer_F"; 
 comment "Squad Leader";
-_funker = "B_Soldier_SL_F";
+local _funker = "B_Soldier_SL_F";
 comment "Combat Life Saver";
-_medic = "B_medic_F";
+local _medic = "B_medic_F";
 
 
 comment "Team Leader";
-_tf = "B_Soldier_TL_F";
+local _tf = "B_Soldier_TL_F";
 comment "Grenadier";
-_gl = "B_Soldier_GL_F";
+local _gl = "B_Soldier_GL_F";
 comment "Autorifleman";
-_mg = "B_soldier_AR_F";
+local _mg = "B_soldier_AR_F";
 comment "Ammo Bearer";
-_mgAssi = "B_Soldier_A_F";
+local _mgAssi = "B_Soldier_A_F";
 comment "Rifleman (AT)";
-_at = "B_soldier_LAT_F";
+local _at = "B_soldier_LAT_F";
 comment "Engineer";
-_pio = "B_engineer_F";
+local _pio = "B_engineer_F";
 
 comment "Repair Specialist";
-_logistic = "B_soldier_repair_F";
+local _logistic = "B_soldier_repair_F";
 comment "Rifleman (Light)";
-_medevac = "B_Soldier_lite_F";
+local _medevac = "B_Soldier_lite_F";
 
 comment "Helicopter Pilot";
-_pilot = "B_Helipilot_F";
+local _pilot = "B_Helipilot_F";
 
 comment "classes to use: B_Soldier_F (Rifleman), B_Pilot_F (Pilot), B_helicrew_F (Helicopter Crew)";
 
 if(_parameterCorrect) then {
 	if(side _x == west) then {
-		_type = typeOf _x;
+		local _type = typeOf _x;
 		
 		removeAllWeapons _x;
 		removeAllItems _x;
