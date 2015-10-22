@@ -1,9 +1,9 @@
-private _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
-private _returnValue = false;
+local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
+local _returnValue = false;
 
 if(_parameterCorrect) then {
-	private _cfg = (configFile >> "CfgWeapons");
-	private _containerNumber = -1;
+	local _cfg = (configFile >> "CfgWeapons");
+	local _containerNumber = -1;
 	if (_containerClassname isKindOf ["Uniform_Base", _cfg]) then {
 		_containerNumber = 0;
 		
