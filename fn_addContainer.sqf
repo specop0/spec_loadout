@@ -19,7 +19,7 @@ if(_parameterCorrect) then {
 		case 0 : {
 			_uniformName = uniform _x;
 			if(_containerClassname == _uniformName && _containerClassname != "") then {
-				_uniform = uniformContainer _x;
+				local _uniform = uniformContainer _x;
 				clearItemCargoGlobal _uniform;
 				clearMagazineCargoGlobal _uniform;
 				clearWeaponCargoGlobal _uniform;
@@ -31,7 +31,7 @@ if(_parameterCorrect) then {
 		case 1 : {
 			_vestName = vest _x;
 			if(_containerClassname == _vestName && _containerClassname != "") then {
-				_vest = vestContainer _x;
+				local _vest = vestContainer _x;
 				clearItemCargoGlobal _vest;
 				clearMagazineCargoGlobal _vest;
 				clearWeaponCargoGlobal _vest;
@@ -41,7 +41,7 @@ if(_parameterCorrect) then {
 			};
 		};
 		case 2 : {
-			_backpackName = backpack _x;
+			local _backpackName = backpack _x;
 			if(_containerClassname == _backpackName && _containerClassname != "") then {
 				_backpack = backpackContainer _x;
 				clearItemCargoGlobal _backpack;
