@@ -1,3 +1,20 @@
+/*
+	Author: SpecOp0, jokoho48
+
+	Description:
+	Wrapper to add a container to a unit (Uniform, Vest or Backpack).
+	If the unit already has the container the content is cleared to avoid
+	locality problems: http://feedback.arma3.com/view.php?id=19829
+	Otherwise the container is removed and the new one is added.
+
+	Parameter(s):
+	0: OBJECT - unit to add a container
+	1: STRING - classname of container
+
+	Returns:
+	BOOL - true if container was added (or cleared) successful
+*/
+
 local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
 local _returnValue = false;
 
