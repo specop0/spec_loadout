@@ -199,9 +199,9 @@ if(_parameterCorrect) then {
 				[_unit,"ToolKit",2] call Spec_fnc_addItemToContainer;
 				[_unit,"DemoCharge_Remote_Mag",2, 2] call Spec_fnc_addItemToContainer;
 				[_unit,"SLAMDirectionalMine_Wire_Mag",3, 2] call Spec_fnc_addItemToContainer;
-				[_unit,"ACE_M26_Clacker",2] call Spec_fnc_addItemToContainer;
-				[_unit,"ACE_Clacker",2] call Spec_fnc_addItemToContainer;
-				[_unit,"ACE_DefusalKit",2] call Spec_fnc_addItemToContainer;
+				[_unit,"ACE_M26_Clacker",3] call Spec_fnc_addItemToContainer;
+				[_unit,"ACE_Clacker",3] call Spec_fnc_addItemToContainer;
+				[_unit,"ACE_DefusalKit",3] call Spec_fnc_addItemToContainer;
 				_unit setVariable ["ACE_IsEngineer", 2];
 			};
 			case _logisticClass : {
