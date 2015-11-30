@@ -31,12 +31,12 @@ _oplClass = "B_officer_F";
 comment "Squad Leader";
 _funkerClass = "B_Soldier_SL_F";
 comment "Combat Life Saver";
-_medicClass = "B_medicClass_F";
+_medicClass = "B_medic_F";
 
 comment "Team Leader";
 _tfClass = "B_Soldier_TL_F";
 comment "Grenadier";
-_glClass = "B_Soldier_glClass_F";
+_glClass = "B_Soldier_GL_F";
 
 comment "Autorifleman";
 _mgClass = "B_soldier_AR_F";
