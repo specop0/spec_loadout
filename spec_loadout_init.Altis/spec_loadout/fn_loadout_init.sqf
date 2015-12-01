@@ -1,5 +1,5 @@
 waitUntil {!isNull player || isServer}; 
-_parameterCorrect = params [["_x",objNull,[objNull]]];
+private _parameterCorrect = params [["_x",objNull,[objNull]]];
 
 if(_parameterCorrect) then {
 	if(side _x == west) then {

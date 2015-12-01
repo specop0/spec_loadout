@@ -1,75 +1,75 @@
-local _uniform = "U_B_CombatUniform_mcam";
-local _vest = "V_PlateCarrier1_rgr";
+private _uniform = "U_B_CombatUniform_mcam";
+private _vest = "V_PlateCarrier1_rgr";
 
-local _backpack = "B_AssaultPack_mcamo";
-local _backpackBig = "B_Carryall_mcamo";
-local _backpackLR = "tf_rt1523g_big_rhs";
+private _backpack = "B_AssaultPack_mcamo";
+private _backpackBig = "B_Carryall_mcamo";
+private _backpackLR = "tf_rt1523g_big_rhs";
 
-local _headgear = "H_HelmetB_grass";
-local _headgearPilot = "H_HelmetCrew_0";
-local _googles = "BWA3_G_Combat_Clear";
+private _headgear = "H_HelmetB_grass";
+private _headgearPilot = "H_HelmetCrew_0";
+private _googles = "BWA3_G_Combat_Clear";
 
-local _standardWeapon = "rhs_m4a1_grip_acog3_usmc";
-local _standardAmmo = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
-local _standardAccessory = ["rhsusf_acc_anpeq15","rhsusf_acc_ACOG3_USMC"];
-local _standardAccessoryExtra = ["rhsusf_acc_eotech_552"];
+private _standardWeapon = "rhs_m4a1_grip_acog3_usmc";
+private _standardAmmo = "rhs_mag_30Rnd_556x45_Mk318_Stanag";
+private _standardAccessory = ["rhsusf_acc_anpeq15","rhsusf_acc_ACOG3_USMC"];
+private _standardAccessoryExtra = ["rhsusf_acc_eotech_552"];
 
-local _grenadeLauncherWeapon = "BWA3_G36_equipped";
-local _grenadeLauncherAmmo = "BWA3_30Rnd_556x45_G36_AP";
-local _grenadeLauncherAccessory = ["BWA3_acc_LLM01_irlaser","BWA3_optic_ZO4x30"];
-local _grenadeLauncherAccessoryExtra = ["BWA3_optic_NSV600"];
+private _grenadeLauncherWeapon = "BWA3_G36_equipped";
+private _grenadeLauncherAmmo = "BWA3_30Rnd_556x45_G36_AP";
+private _grenadeLauncherAccessory = ["BWA3_acc_LLM01_irlaser","BWA3_optic_ZO4x30"];
+private _grenadeLauncherAccessoryExtra = ["BWA3_optic_NSV600"];
 
-local _secondaryWeapon = "hgun_Pistol_heavy_01_snds_F";
-local _secondaryAmmo = "11Rnd_45ACP_Mag";
-local _secondaryAccessory = ["muzzle_snds_acp"];
+private _secondaryWeapon = "hgun_Pistol_heavy_01_snds_F";
+private _secondaryAmmo = "11Rnd_45ACP_Mag";
+private _secondaryAccessory = ["muzzle_snds_acp"];
 
 comment "Officer";
-local _oplClass = "B_officer_F"; 
+private _oplClass = "B_officer_F"; 
 comment "Squad Leader";
-local _funkerClass = "B_Soldier_SL_F";
+private _funkerClass = "B_Soldier_SL_F";
 comment "Combat Life Saver";
-local _medicClass = "B_medicClass_F";
+private _medicClass = "B_medicClass_F";
 
 comment "Team Leader";
-local _tfClass = "B_Soldier_TL_F";
+private _tfClass = "B_Soldier_TL_F";
 comment "Grenadier";
-local _glClass = "B_Soldier_glClass_F";
+private _glClass = "B_Soldier_glClass_F";
 
 comment "Autorifleman";
-local _mgClass = "B_soldier_AR_F";
-local _mgWeapon = "BWA3_mg5";
-local _mgAmmo = "BWA3_120Rnd_762x51";
-local _mgAccessory = ["BWA3_acc_LLM01_irlaser","BWA3_optic_ZO4x30"];
-local _mgAccessoryExtra = ["BWA3_optic_NSV600"];
+private _mgClass = "B_soldier_AR_F";
+private _mgWeapon = "BWA3_mg5";
+private _mgAmmo = "BWA3_120Rnd_762x51";
+private _mgAccessory = ["BWA3_acc_LLM01_irlaser","BWA3_optic_ZO4x30"];
+private _mgAccessoryExtra = ["BWA3_optic_NSV600"];
 comment "Ammo Bearer";
-local _mgAssiClass = "B_Soldier_A_F";
+private _mgAssiClass = "B_Soldier_A_F";
 
 comment "Helicopter Crew";
-local _lmgClass = "B_helicrew_F";
-local _lmgWeapon = "BWA3_MG4";
-local _lmgAmmo = "BWA3_200Rnd_556x45_Tracer";
-local _lmgAccessory = ["optic_MRCO"];
-local _lmgAccessoryExtra = [];
+private _lmgClass = "B_helicrew_F";
+private _lmgWeapon = "BWA3_MG4";
+private _lmgAmmo = "BWA3_200Rnd_556x45_Tracer";
+private _lmgAccessory = ["optic_MRCO"];
+private _lmgAccessoryExtra = [];
 
 comment "Rifleman (AT)";
-local _atClass = "B_soldier_LAT_F";
-local _atWeapon = "rhs_weap_m136";
+private _atClass = "B_soldier_LAT_F";
+private _atWeapon = "rhs_weap_m136";
 
 comment "Engineer";
-local _pioClass = "B_engineer_F";
+private _pioClass = "B_engineer_F";
 comment "Repair Specialist";
-local _logisticClass = "B_soldier_repair_F";
+private _logisticClass = "B_soldier_repair_F";
 comment "Rifleman (Light)";
-local _medevacClass = "B_Soldier_lite_F";
+private _medevacClass = "B_Soldier_lite_F";
 comment "Helicopter Pilot";
-local _pilotClass = "B_Helipilot_F";
+private _pilotClass = "B_Helipilot_F";
 
 comment "classes to use: B_Soldier_F (Rifleman), B_pilotClass_F (Pilot), B_helicrew_F (Helicopter Crew)";
 
 {
 	_units = _x;
 	if(side _unit == west) then {
-		local _type = typeOf _unit;
+		private _type = typeOf _unit;
 		
 		removeAllWeapons _unit;
 		removeAllItems _unit;

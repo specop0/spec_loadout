@@ -1,4 +1,4 @@
-_parameterCorrect = params [["_x",objNull,[objNull]]];
+private _parameterCorrect = params [["_x",objNull,[objNull]]];
 if(_parameterCorrect) then {
 	removeAllWeapons _x;
 	removeAllItems _x;

@@ -15,12 +15,12 @@
 	BOOL - true if container was added (or cleared) successful
 */
 
-local _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
-local _returnValue = false;
+private _parameterCorrect = params [["_x",objNull,[objNull]],["_containerClassname","",["STRING"]]];
+private _returnValue = false;
 
 if(_parameterCorrect) then {
-	local _cfg = (configFile >> "CfgWeapons");
-	local _containerNumber = -1;
+	private _cfg = (configFile >> "CfgWeapons");
+	private _containerNumber = -1;
 	if (_containerClassname isKindOf ["Uniform_Base", _cfg]) then {
 		_containerNumber = 0;
 		
@@ -36,7 +36,7 @@ if(_parameterCorrect) then {
 		case 0 : {
 			_uniformName = uniform _x;
 			if(_containerClassname == _uniformName && _containerClassname != "") then {
-				local _uniform = uniformContainer _x;
+				private _uniform = uniformContainer _x;
 				clearItemCargoGlobal _uniform;
 				clearMagazineCargoGlobal _uniform;
 				clearWeaponCargoGlobal _uniform;
@@ -48,7 +48,7 @@ if(_parameterCorrect) then {
 		case 1 : {
 			_vestName = vest _x;
 			if(_containerClassname == _vestName && _containerClassname != "") then {
-				local _vest = vestContainer _x;
+				private _vest = vestContainer _x;
 				clearItemCargoGlobal _vest;
 				clearMagazineCargoGlobal _vest;
 				clearWeaponCargoGlobal _vest;
@@ -58,7 +58,7 @@ if(_parameterCorrect) then {
 			};
 		};
 		case 2 : {
-			local _backpackName = backpack _x;
+			private _backpackName = backpack _x;
 			if(_containerClassname == _backpackName && _containerClassname != "") then {
 				_backpack = backpackContainer _x;
 				clearItemCargoGlobal _backpack;
