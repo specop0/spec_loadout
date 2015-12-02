@@ -1,5 +1,18 @@
 waitUntil {!isNull player || isServer};
 private _parameterCorrect = params [["_unit",objNull,[objNull]]];
+private _type = "";
+if !(_unit isKindOf "Man") then {
+	_parameterCorrect = params [ "", ["_caller", objNull,[objNull]] ];
+	if(_parameterCorrect) then {
+		_unit = _caller;
+	};
+	if ((_this select 3) isEqualTypeAny ["",[]]) then {
+		private _addActionParameterCorrect = (_this select 3) params [ ["_typeAddActionArg","",["STRING"]] ];
+		if(_addActionParameterCorrect) then {
+			_type = _typeAddActionArg;
+		};
+	};
+};
 
 private _uniform = "U_B_CombatUniform_mcam";
 private _vest = "V_PlateCarrier1_rgr";
@@ -71,8 +84,9 @@ comment "classes to use: B_Soldier_F (Rifleman), B_pilotClass_F (Pilot), B_helic
 
 if(_parameterCorrect) then {
 	if(side _unit == west) then {
-		private _type = typeOf _unit;
-		
+		if(_type == "") then {
+			_type = typeOf _unit;
+		};	
 		removeAllWeapons _unit;
 		removeAllItems _unit;
 		removeAllAssignedItems _unit;
@@ -88,7 +102,7 @@ if(_parameterCorrect) then {
 		if(_type == _oplClass || _type == _funkerClass || _type == _logisticClass || _type == _pilotClass) then {
 			_unit addBackpack _backpackLR;
 		} else {
-			if(_type == _medevacClass || _type == _medicClass) then {
+			if(_type == _medevacClass || _type == _medicClass || _type == _pioClass) then {
 				_unit addBackpack _backpackBig;
 			} else {
 				_unit addBackpack _backpack;
