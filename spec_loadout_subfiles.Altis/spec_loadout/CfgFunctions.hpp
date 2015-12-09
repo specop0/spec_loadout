@@ -2,9 +2,8 @@ class spec_loadout {
 	tag = "Spec";
 	class init {
 		file="spec_loadout";
-		class loadout {};
-		class ki_init {};
 		class addItemToContainer {};
+		class loadout {};
 		class loadout_at {};
 		class loadout_gl {};
 		class loadout_logistic {};
@@ -15,5 +14,6 @@ class spec_loadout {
 		class loadout_opl {};
 		class loadout_pio {};
 		class loadout_tf {};
+		class units_init { postInit = 1; };
 	};
 };
