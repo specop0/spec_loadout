@@ -1,45 +1,45 @@
 waitUntil {!isNull player || isServer}; 
-private _parameterCorrect = params [["_x",objNull,[objNull]]];
+private _parameterCorrect = params [["_unit",objNull,[objNull]]];
 
 if(_parameterCorrect) then {
-	if(side _x == west) then {
-		[_x] call Spec_fnc_loadout_respawn;
+	if(side _unit == west) then {
+		[_unit] call Spec_fnc_loadout_respawn;
 		comment "only some classes other loadout";
 		comment "THIS STRUCTURE IMPORTANT!";
 		if (!isNil "gelb_1") then {
-			if (_x == gelb_1) then {
-				removeAllWeapons _x;
-				removeAllItems _x;
-				removeAllAssignedItems _x;
-				removeUniform _x;
-				removeVest _x;
-				removeBackpack _x;
-				removeHeadgear _x;
-				removeGoggles _x;
+			if (_unit == gelb_1) then {
+				removeAllWeapons _unit;
+				removeAllItems _unit;
+				removeAllAssignedItems _unit;
+				removeUniform _unit;
+				removeVest _unit;
+				removeBackpack _unit;
+				removeHeadgear _unit;
+				removeGoggles _unit;
 			};
 		};
 		if (!isNil "at_1") then {
-			if (_x == at_1) then {
-				removeAllWeapons _x;
-				removeAllItems _x;
-				removeAllAssignedItems _x;
-				removeUniform _x;
-				removeVest _x;
-				removeBackpack _x;
-				removeHeadgear _x;
-				removeGoggles _x;
+			if (_unit == at_1) then {
+				removeAllWeapons _unit;
+				removeAllItems _unit;
+				removeAllAssignedItems _unit;
+				removeUniform _unit;
+				removeVest _unit;
+				removeBackpack _unit;
+				removeHeadgear _unit;
+				removeGoggles _unit;
 				
-				_x addHeadgear "H_HelmetLeaderO_ocamo";
-				_x forceAddUniform "U_O_CombatUniform_ocamo";
-				_x addVest "V_TacVest_khk";
-				_x addBackpack "tf_mr3000";
+				_unit addHeadgear "H_HelmetLeaderO_ocamo";
+				_unit forceAddUniform "U_O_CombatUniform_ocamo";
+				_unit addVest "V_TacVest_khk";
+				_unit addBackpack "tf_mr3000";
 
-				_x addWeapon "Rangefinder";
-				_x linkItem "ItemMap";
-				_x linkItem "ItemCompass";
-				_x linkItem "ItemWatch";
-				_x linkItem "tf_fadak_1";
-				_x linkItem "ItemGPS";
+				_unit addWeapon "Rangefinder";
+				_unit linkItem "ItemMap";
+				_unit linkItem "ItemCompass";
+				_unit linkItem "ItemWatch";
+				_unit linkItem "tf_fadak_1";
+				_unit linkItem "ItemGPS";
 			};
 		};
 	};
