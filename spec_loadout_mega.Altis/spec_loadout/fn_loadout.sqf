@@ -170,10 +170,10 @@ if(_parameterCorrect) then {
 		comment "lead equipment (tablet, etc)";
 		if(_type == _oplClass || _type == _tfClass || _type == _funkerClass || _type == _logisticClass || _type == _medevacClass || _type == _pilotClass) then {
 			_unit addItemToUniform "ACE_microDAGR";
-			if(_type == _oplClass) then {
-				[_unit,"ACE_DK10_b",2] call Spec_fnc_addItemToContainer;
-			} else {
+			if(_type == _medevacClass || _type == _funkerClass) then {
 				[_unit,"ACE_GD300_b",2] call Spec_fnc_addItemToContainer;
+			} else {
+				[_unit,"ACE_DK10_b",2] call Spec_fnc_addItemToContainer;
 			};
 		};
 		if(_type == _oplClass || _type == _tfClass || _type == _logisticClass || _type == _pilotClass) then {
