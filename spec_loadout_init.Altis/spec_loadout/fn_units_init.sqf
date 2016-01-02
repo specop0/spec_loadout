@@ -19,7 +19,7 @@ if(isServer) then {
 		if(side _x == west) then {
 			comment "assign loadout to AI only (excellent for testing purposes)";
 			[_x] call Spec_fnc_loadout_init;
-			_x addEventHandler ["Respawn", Spec_fnc_loadout_respawn];
+			_x addEventHandler ["Respawn", {(_this select 0) call Spec_fnc_loadout_respawn;}];
 		} else {
 			_x removeMagazines "1Rnd_HE_Grenade_shell";
 		};
@@ -27,6 +27,6 @@ if(isServer) then {
 };
 if(hasInterface) then {
 	[player] call Spec_fnc_loadout_init;
-	player addEventHandler ["Respawn", Spec_fnc_loadout_respawn];
+	player addEventHandler ["Respawn", {(_this select 0) call Spec_fnc_loadout_respawn;}];
 };
 true
