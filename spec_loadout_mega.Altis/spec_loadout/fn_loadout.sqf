@@ -222,13 +222,14 @@ if(_parameterCorrect) then {
 			[_unit,"ACE_epinephrine",2, 12] call Spec_fnc_addItemToContainer;
 			[_unit,"ACE_morphine",2, 12] call Spec_fnc_addItemToContainer;
 			[_unit,"ACE_surgicalKit",2, 5] call Spec_fnc_addItemToContainer;
-			[_unit,"ACE_personalAidKit",2] call Spec_fnc_addItemToContainer;
+			[_unit,"ACE_personalAidKit",2, 3] call Spec_fnc_addItemToContainer;
 			_unit setVariable ["ace_medical_medicClass", 2];
 		};
 		default {
-			[_unit,"ACE_fieldDressing",2, 7] call Spec_fnc_addItemToContainer;
+			[_unit,"ACE_elasticBandage",2, 7] call Spec_fnc_addItemToContainer;
+			[_unit,"ACE_packingBandage",2, 5] call Spec_fnc_addItemToContainer;
 			[_unit,"ACE_tourniquet",2, 2] call Spec_fnc_addItemToContainer;
-			[_unit,"ACE_morphine",2, 1] call Spec_fnc_addItemToContainer;
+			[_unit,"ACE_morphine",2, 1] call Spec_fnc_addItemToContainer;;
 		};
 	};
 	
