@@ -58,7 +58,7 @@ private _backpackBig = "B_Carryall_mcamo";
 private _backpackLR = "tf_rt1523g_big_rhs";
 
 private _headgear = "H_HelmetB_grass";
-private _headgearPilot = "H_HelmetCrew_0";
+private _headgearPilot = "H_PilotHelmetHeli_B";
 private _googles = "BWA3_G_Combat_Clear";
 
 private _standardWeapon = "rhs_m4a1_grip_acog3_usmc";
