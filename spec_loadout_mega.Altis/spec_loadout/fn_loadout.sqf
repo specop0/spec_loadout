@@ -242,6 +242,10 @@ if(_parameterCorrect) then {
 		case _glClass : {
 			[_unit,"1Rnd_HE_Grenade_shell",2, 12] call Spec_fnc_addItemToContainer;
 		};
+		case _funkerClass : {
+			[_unit,"1Rnd_Smoke_Grenade_shell",2, 6] call Spec_fnc_addItemToContainer;
+			[_unit,"1Rnd_SmokeRed_Grenade_shell",2, 6] call Spec_fnc_addItemToContainer;
+		};
 		case _pioClass : {
 			[_unit,"ToolKit",2] call Spec_fnc_addItemToContainer;
 			[_unit,"DemoCharge_Remote_Mag",2, 2] call Spec_fnc_addItemToContainer;
@@ -279,9 +283,7 @@ if(_parameterCorrect) then {
 		} forEach _mgAccessoryExtra;	
 	} else {
 		if(_type == _lmgClass) then {
-			[_unit,_lmgAmmo,1] call Spec_fnc_addItemToContainer;
-			[_unit,_lmgAmmo,2, 3] call Spec_fnc_addItemToContainer;
-			
+			[_unit,_lmgAmmo,1] call Spec_fnc_addItemToContainer;	
 			_unit addWeapon _lmgWeapon;
 			{
 				_unit addPrimaryWeaponItem _x;
@@ -289,11 +291,11 @@ if(_parameterCorrect) then {
 			{
 				[_unit,_x,3] call Spec_fnc_addItemToContainer;
 			} forEach _lmgAccessoryExtra;				
+			[_unit,_lmgAmmo,3, 3] call Spec_fnc_addItemToContainer;
 		} else {
 			comment "grenade launcher";
-			if(_type in [_tfClass, _glClass]) then {
-				[_unit,_grenadeLauncherAmmo,2, 6] call Spec_fnc_addItemToContainer;
-				
+			if(_type in [_tfClass, _glClass, _funkerClass]) then {
+				[_unit,_grenadeLauncherAmmo,1, 6] call Spec_fnc_addItemToContainer;
 				_unit addWeapon _grenadeLauncherWeapon;
 				{
 					_unit addPrimaryWeaponItem _x;
