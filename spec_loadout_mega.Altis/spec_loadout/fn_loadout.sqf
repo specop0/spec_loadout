@@ -165,7 +165,7 @@ if(_parameterCorrect) then {
 	
 	comment "lead equipment (tablet, etc)";
 	if(_type in [_oplClass, _tfClass, _funkerClass, _logisticClass, _medevacClass, _pilotClass]) then {
-		_unit addItemToUniform "ACE_microDAGR";
+		[_unit,"ACE_microDAGR",1] call Spec_fnc_addItemToContainer;
 		if(_type in [_medevacClass, _funkerClass]) then {
 			[_unit,"ACE_GD300_b",2] call Spec_fnc_addItemToContainer;
 		} else {
