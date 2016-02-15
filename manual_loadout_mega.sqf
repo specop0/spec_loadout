@@ -67,7 +67,7 @@ private _pilotClass = "B_Helipilot_F";
 comment "classes to use: B_Soldier_F (Rifleman), B_pilotClass_F (Pilot), B_helicrew_F (Helicopter Crew)";
 
 {
-	_units = _x;
+	_unit = _x;
 	if(side _unit == west) then {
 		private _type = typeOf _unit;
 		
