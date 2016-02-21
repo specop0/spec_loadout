@@ -6,8 +6,7 @@ if(_parameterCorrect) then {
 			switch (typeOf _unit) do {
 			comment "Grenadier - #2 inkl 40mm";
 			case ("B_Soldier_GL_F"):{
-				grenadierLoadout = compile preprocessFileLineNumbers "spec_loadout\grenadier.sqf";
-				[_unit] call grenadierLoadout;
+				[_unit] call compile preprocessFileLineNumbers "spec_loadout\grenadier.sqf";
 			};
 			comment "CombatLifeSaver - Medic #3";
 			case("B_medic_F"): {
